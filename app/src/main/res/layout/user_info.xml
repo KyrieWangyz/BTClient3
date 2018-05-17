@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/user_info">
+
+    <xuemcu.com.btclient.TitleBar
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+    </xuemcu.com.btclient.TitleBar>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="32dp"
+            android:layout_marginTop="70dp"
+            android:orientation="vertical">
+            <!--android:background="@drawable/selector_login_input"-->
+
+
+            <!--用户名-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:gravity="center_vertical">
+
+
+                <TextView
+                    android:id="@+id/login_id_space"
+                    android:layout_width="50dp"
+                    android:layout_height="45dp"
+                    android:text="用户名"
+                    android:gravity="center"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_toRightOf="@id/login_id_img"
+                    android:background="#99DDDDDD" />
+
+                <EditText
+                    android:id="@+id/editText_reg_username"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="10dp"
+                    android:layout_toRightOf="@id/login_id_space"
+                    android:background="#00FFFFFF"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="8dp"
+                    android:singleLine="true"
+                    android:textColorHint="#99DDDDDD"
+                    android:textSize="14sp" />
+                <!--android:textColor="#FFF"-->
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#f1eded" />
+
+            <!--密码-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:gravity="center_vertical">
+
+
+                <TextView
+                    android:id="@+id/reg_id_space"
+                    android:layout_width="50dp"
+                    android:layout_height="45dp"
+                    android:text="密码"
+                    android:gravity="center"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_toRightOf="@id/login_id_img"
+                    android:background="#99DDDDDD" />
+
+                <EditText
+                    android:id="@+id/editText_reg_pwd"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="10dp"
+                    android:background="#00FFFFFF"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:layout_toRightOf="@id/reg_id_space"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="8dp"
+                    android:singleLine="true"
+                    android:textColorHint="#99DDDDDD"
+                    android:textSize="14sp" />
+                <!--android:textColor="#FFF"-->
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#f1eded" />
+
+            <!--选择性别-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:orientation="vertical">
+                <!--android:background="@drawable/selector_login_input"-->
+
+
+                <TextView
+                    android:id="@+id/sex_text"
+                    android:layout_width="50dp"
+                    android:layout_height="40dp"
+                    android:text="性别"
+                    android:gravity="center"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical"
+                    android:background="#99DDDDDD" />
+                <RadioGroup
+                    android:id="@+id/edt_sex"
+                    android:layout_width="match_parent"
+                    android:layout_height="46dp"
+                    android:layout_marginLeft="40dp"
+                    android:layout_toRightOf="@id/sex_text"
+                    android:orientation="horizontal"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="男"/>
+
+                    <RadioButton
+                        android:id="@+id/rb_male"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:enabled="false"
+                        android:text="男"
+                        android:textColor="@color/white" />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:enabled="false"
+                        android:text="女"/>
+
+                    <RadioButton
+                        android:id="@+id/rb_famale"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:enabled="false"
+                        android:text="女"
+                        android:textColor="@color/white" />
+
+                </RadioGroup>
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#f1eded" />
+
+            <!--输入年龄-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:orientation="vertical">
+                <!--android:background="@drawable/selector_login_input"-->
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="46dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/age_space"
+                        android:layout_width="50dp"
+                        android:layout_height="40dp"
+                        android:text="年龄"
+                        android:gravity="center"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center_vertical"
+                        android:layout_toRightOf="@id/height_img"
+                        android:background="#99DDDDDD" />
+
+                    <EditText
+                        android:id="@+id/editText_age"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center_vertical"
+                        android:layout_margin="10dp"
+                        android:layout_toRightOf="@id/age_space"
+                        android:background="#00FFFFFF"
+                        android:maxLines="1"
+                        android:padding="5dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="8dp"
+                        android:singleLine="true"
+                        android:textColorHint="#99DDDDDD"
+                        android:textSize="14sp" />
+                    <!--android:textColor="#FFF"-->
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#f1eded" />
+
+
+            <!--输入身高-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:orientation="vertical">
+                <!--android:background="@drawable/selector_login_input"-->
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="46dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/height_space"
+                        android:layout_width="50dp"
+                        android:layout_height="40dp"
+                        android:text="身高"
+                        android:gravity="center"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center_vertical"
+                        android:layout_toRightOf="@id/height_img"
+                        android:background="#99DDDDDD" />
+
+                    <EditText
+                        android:id="@+id/editText_height"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center_vertical"
+                        android:layout_margin="10dp"
+                        android:layout_toRightOf="@id/height_space"
+                        android:background="#00FFFFFF"
+                        android:maxLines="1"
+                        android:padding="5dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="8dp"
+                        android:singleLine="true"
+                        android:textColorHint="#99DDDDDD"
+                        android:textSize="14sp" />
+                    <!--android:textColor="#FFF"-->
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#f1eded" />
+
+            <!--输入体重-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:orientation="vertical">
+                <!--android:background="@drawable/selector_login_input"-->
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="46dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/weight_space"
+                        android:layout_width="50dp"
+                        android:layout_height="40dp"
+                        android:text="体重"
+                        android:gravity="center"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center_vertical"
+                        android:layout_toRightOf="@id/height_img"
+                        android:background="#99DDDDDD" />
+
+                    <EditText
+                        android:id="@+id/editText_weight"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center_vertical"
+                        android:layout_margin="10dp"
+                        android:layout_toRightOf="@id/weight_space"
+                        android:background="#00FFFFFF"
+                        android:maxLines="1"
+                        android:padding="5dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="8dp"
+                        android:singleLine="true"
+                        android:textColorHint="#99DDDDDD"
+                        android:textSize="14sp" />
+                    <!--android:textColor="#FFF"-->
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#f1eded" />
+
+            <Button
+                android:id="@+id/save_btn"
+                android:layout_width="168dp"
+                android:layout_height="46dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginRight="32dp"
+                android:layout_marginTop="40dp"
+                android:text="保存"
+                android:layout_gravity="center"
+                android:textColor="#3e9eab"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

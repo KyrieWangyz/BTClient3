@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/login_bg"
+    android:orientation="vertical">
+
+    <!--<include layout="@layout/registerhead_content" />-->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="94dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginRight="32dp"
+                android:layout_marginTop="60dp"
+                android:background="@drawable/selector_login_input"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="46dp"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:id="@+id/login_id_img"
+                        android:layout_width="46dp"
+                        android:layout_height="18dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center_vertical"
+                        android:paddingLeft="14dp"
+                        android:paddingRight="14dp"
+                        android:src="@mipmap/log_phone" />
+
+                    <TextView
+                        android:id="@+id/login_id_space"
+                        android:layout_width="1dp"
+                        android:layout_height="18dp"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center_vertical"
+                        android:layout_toRightOf="@id/login_id_img"
+                        android:background="#99DDDDDD" />
+
+                    <xuemcu.com.btclient.EditText
+                        android:id="@+id/editText_login_username"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center_vertical"
+                        android:layout_margin="10dp"
+                        android:layout_toRightOf="@id/login_id_space"
+                        android:background="#00FFFFFF"
+                        android:hint="请输入用户名"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="8dp"
+                        android:singleLine="true"
+                        android:textColor="#FFF"
+                        android:textColorHint="#99DDDDDD"
+                        android:textSize="14sp" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#f1eded" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:id="@+id/login_pwd_img"
+                        android:layout_width="46dp"
+                        android:layout_height="18dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center_vertical"
+                        android:paddingLeft="14dp"
+                        android:paddingRight="14dp"
+                        android:src="@mipmap/login_pwd" />
+
+                    <TextView
+                        android:id="@+id/login_pwd_space"
+                        android:layout_width="1dp"
+                        android:layout_height="18dp"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center_vertical"
+                        android:layout_toRightOf="@id/login_pwd_img"
+                        android:background="#99DDDDDD" />
+
+                    <xuemcu.com.btclient.EditText
+                        android:id="@+id/editText_login_userpwd"
+                        android:layout_width="195dp"
+                        android:layout_height="45dp"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center_vertical"
+                        android:layout_margin="10dp"
+                        android:layout_toRightOf="@id/login_pwd_space"
+                        android:background="#00FFFFFF"
+                        android:hint="请输入密码"
+                        android:inputType="textPassword"
+                        android:maxLines="1"
+                        android:padding="5dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="8dp"
+                        android:singleLine="true"
+                        android:textColor="#FFF"
+                        android:textColorHint="#99DDDDDD"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:id="@+id/login_eye"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="3dp"
+                        android:layout_toRightOf="@id/editText_login_userpwd"
+                        android:background="@mipmap/eye_normal" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            //选择性别
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginRight="32dp"
+                android:background="@drawable/selector_login_input"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/sex_img"
+                    android:layout_width="46dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical"
+                    android:paddingLeft="14dp"
+                    android:paddingRight="14dp"
+                    android:src="@mipmap/log_phone" />
+
+                <RadioGroup
+                    android:id="@+id/rg_sex"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/sex_img"
+                    android:orientation="horizontal"
+                    android:visibility="visible">
+
+                    <RadioButton
+                        android:id="@+id/rb_male"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="男"
+                        android:textColor="@color/white" />
+
+                    <RadioButton
+                        android:id="@+id/rb_famale"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="女"
+                        android:textColor="@color/white" />
+                </RadioGroup>
+            </LinearLayout>
+
+            //选择出生年月日 用了一个DatePicker
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginRight="32dp"
+                android:background="@drawable/selector_login_input"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/age_img"
+                    android:layout_width="46dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical"
+                    android:paddingLeft="14dp"
+                    android:paddingRight="14dp"
+                    android:src="@mipmap/log_phone" />
+
+                <DatePicker
+                    android:id="@+id/date_picker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:calendarViewShown="false"
+                    android:visibility="visible">
+
+                </DatePicker>
+
+            </LinearLayout>
+
+            //输入身高
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginRight="32dp"
+                android:background="@drawable/selector_login_input"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="46dp"
+                    android:gravity="center_vertical">
+
+                <ImageView
+                    android:id="@+id/height_img"
+                    android:layout_width="46dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical"
+                    android:paddingLeft="14dp"
+                    android:paddingRight="14dp"
+                    android:src="@mipmap/log_phone" />
+
+                <TextView
+                    android:id="@+id/height_space"
+                    android:layout_width="1dp"
+                    android:layout_height="18dp"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_toRightOf="@id/height_img"
+                    android:background="#99DDDDDD" />
+
+                <xuemcu.com.btclient.EditText
+                    android:id="@+id/editText_height"
+                    android:layout_width="195dp"
+                    android:layout_height="45dp"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="10dp"
+                    android:layout_toRightOf="@id/height_space"
+                    android:background="#00FFFFFF"
+                    android:hint="请输入您的身高"
+                    android:inputType="textPassword"
+                    android:maxLines="1"
+                    android:padding="5dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="8dp"
+                    android:singleLine="true"
+                    android:textColor="#FFF"
+                    android:textColorHint="#99DDDDDD"
+                    android:textSize="14sp" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_login"
+                android:layout_width="168dp"
+                android:layout_height="46dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginRight="32dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/button_border"
+                android:text="注册"
+                android:textColor="#3e9eab"
+                android:textSize="20sp" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

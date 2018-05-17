@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/weight_layout"
+    tools:context="xuemcu.com.testmqtts.WeightActivity"
+    android:orientation="vertical">
+
+    <xuemcu.com.btclient.TitleBar
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+    </xuemcu.com.btclient.TitleBar>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_gravity="center"
+        android:layout_height="50dp">
+        <Button
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Day"
+            android:textSize="10sp"
+            android:id="@+id/day_btn"/>
+
+        <Button
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Week"
+            android:textSize="10sp"
+            android:layout_marginLeft="2dp"
+
+            android:id="@+id/week_btn"/>
+
+        <Button
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:layout_weight="1"
+            android:text="Month"
+            android:textSize="10sp"
+            android:id="@+id/month_btn"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="5"
+        android:orientation="vertical">
+
+
+        <FrameLayout
+            android:id="@+id/fragment_content"
+            android:layout_above="@+id/line1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></FrameLayout>
+    </LinearLayout>
+
+</LinearLayout>
